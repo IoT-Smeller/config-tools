@@ -9,6 +9,7 @@ systemctl daemon-reload
 systemctl stop NetworkManager
 systemctl disable NetworkManager avahi-daemon libnss-mdns
 
+apt update
 apt install -y libnss-resolve hostapd
 rm /etc/resolv.conf
 ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
